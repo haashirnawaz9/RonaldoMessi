@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Ronaldo from './pages/Ronaldo';
+import Messi from './pages/Messi';
+import Login from './pages/Login';
+import Navbar from './components/Navbar';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=> {
+    document.title = "Ronaldo & Messi"
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Navbar></Navbar>
+      <Routes>
+        <Route path = '/' element={<Ronaldo></Ronaldo>}></Route>
+        <Route path = '/Messi' element = {<Messi></Messi>}></Route>
+        <Route path = '/Login' element={<Login></Login>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
