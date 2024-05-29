@@ -9,9 +9,6 @@ const Navbar = () => {
   const Messibtn = () => {
     setTitle("Lionel Messi");
   }
-  const LoginPage = () => {
-    setTitle("Login Page");
-  }
   return (
     <nav className="navbar">
       <h1 className="title" > {title}</h1>
