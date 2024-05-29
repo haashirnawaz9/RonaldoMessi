@@ -14,9 +14,7 @@ const Navbar = () => {
       <h1 className="title" > {title}</h1>
 
       <ul className="nav-links">
-        <li>
-        <Link to="/LogIn" className = "nav-link" onClick = {LoginPage} >Login</Link>
-        </li>
+
         <li>
             <Link to="/" className="nav-link" onClick={Ronaldobtn}> Ronaldo</Link>
           
