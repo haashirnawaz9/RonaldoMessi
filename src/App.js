@@ -11,7 +11,7 @@ function App() {
   },[])
   return (
     <BrowserRouter>
-    <Navbar></Navbar>
+    <Navbar />
       <Routes>
         <Route path = '/' element={<Ronaldo></Ronaldo>}></Route>
         <Route path = '/Messi' element = {<Messi></Messi>}></Route>
